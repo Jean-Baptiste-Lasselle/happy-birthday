@@ -1,4 +1,4 @@
-document.addEventListener("click", (event) => {
+document.addEventListener("click", event => {
   bursty(event.pageX, event.pageY);
 });
 
@@ -13,19 +13,19 @@ function bursty(x, y) {
     degree: 360,
     children: {
       fill: { white: "#34E1FF" },
-      duration: 2000
-    }
-  }).tune({
+      duration: 2000 } }).
+
+  tune({
     x: x,
-    y: y
-  });
+    y: y });
+
 
   burst.replay();
 }
 
 function randomizedConfetti() {
-  let randomX = Math.floor(Math.random() * (document.body.clientWidth-100) + 0);
-  let randomY = Math.floor(Math.random() * (window.innerHeight-200) + 0);
+  let randomX = Math.floor(Math.random() * (document.body.clientWidth - 100) + 0);
+  let randomY = Math.floor(Math.random() * (window.innerHeight - 200) + 0);
   const burst = new mojs.Burst({
     left: 0,
     top: 0,
@@ -34,12 +34,12 @@ function randomizedConfetti() {
     degree: 360,
     children: {
       fill: { white: "#34E1FF" },
-      duration: 2000
-    }
-  }).tune({
+      duration: 2000 } }).
+
+  tune({
     x: randomX,
-    y: randomY
-  });
+    y: randomY });
+
 
   burst.replay();
 }
